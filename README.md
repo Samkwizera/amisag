@@ -1,91 +1,74 @@
-# amisag
+# Amisag – AI-Powered Networking Landing Page
 
-A concise overview of the project, how to set it up locally, how to contribute, and where to find important resources.
+This repository contains the sleek marketing experience for **Amisag**, an AI-powered networking platform built to connect
+students, professionals, and entrepreneurs across Africa with mentors, collaborators, and opportunities—without leaving home.
+
+The landing page blends a clean, futuristic visual language with soft motion, glowing accents, and a black/white/gold/light-blue
+palette to reflect the brand’s ambition and trustworthiness.
+
+## Highlights
+
+- **Hero showcase** with animated network orb, storytelling copy, and bold calls-to-action (“Join Now”, “Explore How It Works”).
+- **About narrative** that introduces inclusive matchmaking, feedback-driven intelligence, and low-bandwidth reach, paired with
+  illustrated profile stacks.
+- **How it Works timeline** outlining the three-step journey from profile creation to AI-curated connections.
+- **Feature spotlight** cards covering matchmaking, USSD/SMS access, private networking, and community experiences.
+- **Testimonials grid** with founding-member quotes to reinforce credibility and social proof.
+- **Magnetic CTA band** inviting visitors to get started for free or request early access, plus an interactive join modal.
+- **Responsive design** tailored for mobile-first browsing with hover/scroll animations on modern devices.
 
 ## Getting Started
 
-- **Prerequisites**: Ensure you have recent versions of Git and a suitable runtime (e.g., Node.js or Python) installed.
-- **Clone**:
+> **Note:** Installing JavaScript dependencies requires access to the public npm registry. If your environment blocks outbound
+> network requests, mirror the dependencies (`react`, `react-dom`, `vite`, `@vitejs/plugin-react`, `typescript`, and their
+> TypeScript types) or install them on a machine with internet access and copy the resulting `node_modules` directory.
+
+### Prerequisites
+
+- Node.js 18+
+- npm 9+ (or pnpm/yarn if you update the scripts accordingly)
+
+### Installation
 
 ```bash
-git clone <repo-url>
-cd amisag
-```
-
-- **Install dependencies** (choose the one that matches your stack):
-
-```bash
-# Node.js
 npm install
-# or
-pnpm install
-# or
-yarn install
 ```
 
-```bash
-# Python (example)
-python -m venv .venv
-. .venv/bin/activate  # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-```
+If the command fails because the registry is unreachable, follow the note above to supply the required packages manually.
 
-- **Run**:
+### Development server
 
 ```bash
-# Common commands (update to match your project)
 npm run dev
-npm run build
-npm test
 ```
+
+The Vite dev server defaults to [http://localhost:5173](http://localhost:5173). Pass `--host 0.0.0.0 --port <port>` to expose the
+preview externally.
+
+### Production build
+
+```bash
+npm run build
+```
+
+This will type-check the project with `tsc` and emit production assets in `dist/`.
 
 ## Project Structure
 
-Describe the important directories and files when the structure stabilizes. For now, common top-level locations might include:
-
-- `src/` – application source code
-- `tests/` – automated tests
-- `public/` or `static/` – static assets
-- `scripts/` – developer scripts and utilities
-
-## Configuration
-
-- Use environment variables for secrets and configuration.
-- Create a `.env` file (do not commit it) by copying `.env.example` if provided.
-
-## Development
-
-- Use feature branches and open Pull Requests for review.
-- Write tests for new functionality where applicable.
-- Keep commits focused and well-described.
-
-## Scripts
-
-Document commonly used scripts here as they are added, for example:
-
-```bash
-npm run lint
-npm run format
-npm run test
 ```
-
-## Contributing
-
-1. Fork the repository and create your branch from `main`.
-2. Make your changes with clear commit messages.
-3. Add or update tests as needed.
-4. Open a Pull Request and fill out the PR template (if available).
+.
+├── index.html          # Vite entry point
+├── package.json
+├── src
+│   ├── App.tsx         # Landing page layout and interaction logic
+│   ├── main.tsx        # React bootstrap
+│   ├── styles.css      # Global styling & animations for the marketing site
+│   └── vite-env.d.ts   # Vite type helpers
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
+```
 
 ## License
 
-Specify the license here (e.g., MIT). If none yet, decide and update this section.
-
-## Contact
-
-- Maintainer: Add name and contact info
-- Issues: Use the repository's Issues tab to report bugs or request features
-
----
-
-Tip: Replace placeholder sections with project-specific details as the codebase evolves.
-
+The project is released under the MIT License. See [`LICENSE`](LICENSE) for full terms.
